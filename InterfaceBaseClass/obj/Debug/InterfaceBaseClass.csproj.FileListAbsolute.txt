@@ -1,0 +1,5 @@
+D:\FieldAssist\FieldAssistProject\FAProject\InterfaceBaseClass\bin\Debug\InterfaceBaseClass.dll
+D:\FieldAssist\FieldAssistProject\FAProject\InterfaceBaseClass\bin\Debug\InterfaceBaseClass.pdb
+D:\FieldAssist\FieldAssistProject\FAProject\InterfaceBaseClass\obj\Debug\InterfaceBaseClass.dll
+D:\FieldAssist\FieldAssistProject\FAProject\InterfaceBaseClass\obj\Debug\InterfaceBaseClass.pdb
+D:\FieldAssist\FieldAssistProject\FAProject\InterfaceBaseClass\bin\Debug\InterfaceBaseClass.dll.config

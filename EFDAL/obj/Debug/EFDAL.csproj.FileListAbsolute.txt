@@ -1,0 +1,16 @@
+D:\FieldAssist\FieldAssistProject\FAProject\EFDAL\bin\Debug\EFDAL.dll.config
+D:\FieldAssist\FieldAssistProject\FAProject\EFDAL\bin\Debug\EFDAL.dll
+D:\FieldAssist\FieldAssistProject\FAProject\EFDAL\bin\Debug\EFDAL.pdb
+D:\FieldAssist\FieldAssistProject\FAProject\EFDAL\bin\Debug\EntityFramework.dll
+D:\FieldAssist\FieldAssistProject\FAProject\EFDAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\FieldAssist\FieldAssistProject\FAProject\EFDAL\bin\Debug\FAProject.dll
+D:\FieldAssist\FieldAssistProject\FAProject\EFDAL\bin\Debug\InterfaceBaseClass.dll
+D:\FieldAssist\FieldAssistProject\FAProject\EFDAL\bin\Debug\InterfaceDal.dll
+D:\FieldAssist\FieldAssistProject\FAProject\EFDAL\bin\Debug\FAProject.pdb
+D:\FieldAssist\FieldAssistProject\FAProject\EFDAL\bin\Debug\InterfaceBaseClass.pdb
+D:\FieldAssist\FieldAssistProject\FAProject\EFDAL\bin\Debug\InterfaceDal.pdb
+D:\FieldAssist\FieldAssistProject\FAProject\EFDAL\bin\Debug\EntityFramework.xml
+D:\FieldAssist\FieldAssistProject\FAProject\EFDAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\FieldAssist\FieldAssistProject\FAProject\EFDAL\obj\Debug\EFDAL.csprojResolveAssemblyReference.cache
+D:\FieldAssist\FieldAssistProject\FAProject\EFDAL\obj\Debug\EFDAL.dll
+D:\FieldAssist\FieldAssistProject\FAProject\EFDAL\obj\Debug\EFDAL.pdb

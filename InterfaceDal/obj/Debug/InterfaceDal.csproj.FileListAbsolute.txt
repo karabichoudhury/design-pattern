@@ -1,0 +1,4 @@
+D:\FieldAssist\FieldAssistProject\FAProject\InterfaceDal\bin\Debug\InterfaceDal.dll
+D:\FieldAssist\FieldAssistProject\FAProject\InterfaceDal\bin\Debug\InterfaceDal.pdb
+D:\FieldAssist\FieldAssistProject\FAProject\InterfaceDal\obj\Debug\InterfaceDal.dll
+D:\FieldAssist\FieldAssistProject\FAProject\InterfaceDal\obj\Debug\InterfaceDal.pdb

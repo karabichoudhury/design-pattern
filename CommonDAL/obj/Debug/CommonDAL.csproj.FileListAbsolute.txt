@@ -1,0 +1,7 @@
+D:\FieldAssist\FieldAssistProject\FAProject\CommonDAL\bin\Debug\CommonDAL.dll
+D:\FieldAssist\FieldAssistProject\FAProject\CommonDAL\bin\Debug\CommonDAL.pdb
+D:\FieldAssist\FieldAssistProject\FAProject\CommonDAL\bin\Debug\InterfaceDal.dll
+D:\FieldAssist\FieldAssistProject\FAProject\CommonDAL\bin\Debug\InterfaceDal.pdb
+D:\FieldAssist\FieldAssistProject\FAProject\CommonDAL\obj\Debug\CommonDAL.csprojResolveAssemblyReference.cache
+D:\FieldAssist\FieldAssistProject\FAProject\CommonDAL\obj\Debug\CommonDAL.dll
+D:\FieldAssist\FieldAssistProject\FAProject\CommonDAL\obj\Debug\CommonDAL.pdb

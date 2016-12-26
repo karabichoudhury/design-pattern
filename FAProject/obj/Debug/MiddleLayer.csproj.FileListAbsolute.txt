@@ -1,0 +1,7 @@
+D:\FieldAssist\FieldAssistProject\FAProject\FAProject\obj\Debug\MiddleLayer.csprojResolveAssemblyReference.cache
+D:\FieldAssist\FieldAssistProject\FAProject\FAProject\bin\Debug\FAProject.dll
+D:\FieldAssist\FieldAssistProject\FAProject\FAProject\bin\Debug\FAProject.pdb
+D:\FieldAssist\FieldAssistProject\FAProject\FAProject\bin\Debug\InterfaceBaseClass.dll
+D:\FieldAssist\FieldAssistProject\FAProject\FAProject\bin\Debug\InterfaceBaseClass.pdb
+D:\FieldAssist\FieldAssistProject\FAProject\FAProject\obj\Debug\FAProject.dll
+D:\FieldAssist\FieldAssistProject\FAProject\FAProject\obj\Debug\FAProject.pdb
