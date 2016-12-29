@@ -35,7 +35,8 @@ namespace ADODAL
         protected abstract List<TEntity> ExecuteCommand();
         protected abstract void ExecuteCommand(TEntity obj, string operation, string model);
         protected abstract List<TEntity> ExecuteCommand(int primaryId, int secondaryId, int productId);
-        protected abstract List<TEntity> ExecuteCommand(int productId,int qty);
+        protected abstract List<TEntity> ExecuteCommand(int productId, int qty);
+        protected abstract int ExecuteCommand(string code, string model);
 
 
         private void Close()
@@ -69,13 +70,21 @@ namespace ADODAL
             return objTypes;
         }
 
-        public List<TEntity> Execute(int productId,int qty)
+        public List<TEntity> Execute(int productId, int qty)
         {
             List<TEntity> objTypes = null;
             Open();
-            objTypes = ExecuteCommand(productId,qty);
+            objTypes = ExecuteCommand(productId, qty);
             Close();
             return objTypes;
+        }
+
+        public int Execute(string code, string model)
+        {
+            Open();
+            int Id = ExecuteCommand(code, model);
+            Close();
+            return Id;
         }
 
 
@@ -92,6 +101,10 @@ namespace ADODAL
             return Execute();
         }
 
+        public override int SearchId(string code, string model)
+        {
+            return Execute(code, model);
+        }
         public override List<TEntity> SearchObj(int primaryId, int secondaryId, int productId)
         {
             return Execute(primaryId, secondaryId, productId);
@@ -99,7 +112,7 @@ namespace ADODAL
 
         public override List<TEntity> SearchScheme(int productId, int qty)
         {
-            return Execute(productId,qty);
+            return Execute(productId, qty);
         }
 
         public override void Delete(TEntity obj, string model)
@@ -283,15 +296,15 @@ namespace ADODAL
                 scheme.name = dr["Name"].ToString();
                 scheme.shortCode = dr["ShortCode"].ToString();
                 scheme.description = dr["Description"].ToString();
-                scheme.startDate =Convert.ToDateTime( dr["StartDate"]);
+                scheme.startDate = Convert.ToDateTime(dr["StartDate"]);
                 scheme.endDate = Convert.ToDateTime(dr["EndDate"]);
-                scheme.discountPercent = Convert.ToInt32( dr["DiscountPercent"]);
+                scheme.discountPercent = Convert.ToInt32(dr["DiscountPercent"]);
                 schemes.Add(scheme);
             }
             return schemes;
         }
 
-        protected override List<IbaseClass> ExecuteCommand(int productId,int qty)
+        protected override List<IbaseClass> ExecuteCommand(int productId, int qty)
         {
             objCommand.CommandText = "select * from tblScheme where  ProductId=" + productId + " and UnitsBooked<=" + qty + " and IsExpired=0 and type='U'";
             SqlDataReader dr = null;
@@ -309,6 +322,31 @@ namespace ADODAL
                 schemes.Add(scheme);
             }
             return schemes;
+        }
+
+        protected override int ExecuteCommand(string code, string model)
+        {
+            string table = "";
+            switch (model)
+            {
+                case "PC":
+                    table = "tblPrimaryCategory";
+                    break;
+                case "SC":
+                    table = "tblSecondaryCategory";
+                    break;
+                case "PR":
+                    table = "tblProduct";
+                    break;
+                case "SH":
+                    table = "tblScheme";
+                    break;
+            }
+            objCommand.CommandText = "select Id from " + table + " where  ShortCode='" + code + "'";
+            int Id = 0;
+            Id = Convert.ToInt32(objCommand.ExecuteScalar());
+
+            return Id;
         }
 
     }

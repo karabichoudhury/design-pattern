@@ -1,0 +1,5 @@
+D:\Design Pattern\design-pattern\ServiceClient\bin\Debug\ServiceClient.exe.config
+D:\Design Pattern\design-pattern\ServiceClient\bin\Debug\ServiceClient.exe
+D:\Design Pattern\design-pattern\ServiceClient\bin\Debug\ServiceClient.pdb
+D:\Design Pattern\design-pattern\ServiceClient\obj\Debug\ServiceClient.exe
+D:\Design Pattern\design-pattern\ServiceClient\obj\Debug\ServiceClient.pdb

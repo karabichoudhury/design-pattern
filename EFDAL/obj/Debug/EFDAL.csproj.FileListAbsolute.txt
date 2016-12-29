@@ -14,3 +14,19 @@ D:\FieldAssist\FieldAssistProject\FAProject\EFDAL\bin\Debug\EntityFramework.SqlS
 D:\FieldAssist\FieldAssistProject\FAProject\EFDAL\obj\Debug\EFDAL.csprojResolveAssemblyReference.cache
 D:\FieldAssist\FieldAssistProject\FAProject\EFDAL\obj\Debug\EFDAL.dll
 D:\FieldAssist\FieldAssistProject\FAProject\EFDAL\obj\Debug\EFDAL.pdb
+D:\Design Pattern\design-pattern\EFDAL\obj\Debug\EFDAL.csprojResolveAssemblyReference.cache
+D:\Design Pattern\design-pattern\EFDAL\obj\Debug\EFDAL.dll
+D:\Design Pattern\design-pattern\EFDAL\obj\Debug\EFDAL.pdb
+D:\Design Pattern\design-pattern\EFDAL\bin\Debug\EFDAL.dll.config
+D:\Design Pattern\design-pattern\EFDAL\bin\Debug\EFDAL.dll
+D:\Design Pattern\design-pattern\EFDAL\bin\Debug\EFDAL.pdb
+D:\Design Pattern\design-pattern\EFDAL\bin\Debug\EntityFramework.dll
+D:\Design Pattern\design-pattern\EFDAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Design Pattern\design-pattern\EFDAL\bin\Debug\FAProject.dll
+D:\Design Pattern\design-pattern\EFDAL\bin\Debug\InterfaceBaseClass.dll
+D:\Design Pattern\design-pattern\EFDAL\bin\Debug\InterfaceDal.dll
+D:\Design Pattern\design-pattern\EFDAL\bin\Debug\FAProject.pdb
+D:\Design Pattern\design-pattern\EFDAL\bin\Debug\InterfaceBaseClass.pdb
+D:\Design Pattern\design-pattern\EFDAL\bin\Debug\InterfaceDal.pdb
+D:\Design Pattern\design-pattern\EFDAL\bin\Debug\EntityFramework.xml
+D:\Design Pattern\design-pattern\EFDAL\bin\Debug\EntityFramework.SqlServer.xml

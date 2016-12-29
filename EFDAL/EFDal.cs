@@ -36,6 +36,11 @@ namespace EFDAL
             throw new NotImplementedException();
         }
 
+        public int SearchId(string code, string model)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<AnyType> SearchObj(int primaryCategoryId, int secondaryId, int productId)
         {
             throw new NotImplementedException();

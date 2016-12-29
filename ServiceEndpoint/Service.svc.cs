@@ -18,11 +18,13 @@ namespace ServiceEndpoint
     {
         IbaseClass obj = null;
 
-        public void Add(string name, string shortCode, string description, decimal price, int primaryCategoryId, int secondaryCategoryId, string model)
+        public void Add(string name, string shortCode, string description, decimal price, string primaryCategoryCode, string secondaryCategoryCode, string model)
         {
             try
             {
                 IDal<IbaseClass> dal = FactoryDALLayer<IDal<IbaseClass>>.Create("ADODal");
+
+                //string primaryCategoryCode = string.Empty;
 
 
                 switch (model)
@@ -35,12 +37,14 @@ namespace ServiceEndpoint
                     case "SC":
                         obj = Factory<IbaseClass>.Create("SC");
                         obj.secondaryCategoryId = 0;
-                        obj.primaryCategoryId = primaryCategoryId;
+                        int primaryId = GetIdFromCode(primaryCategoryCode, "PC");
+                        obj.primaryCategoryId = primaryId;//primaryCategoryId;
                         break;
                     case "PR":
                         obj = Factory<IbaseClass>.Create("PR");
                         obj.primaryCategoryId = 0;
-                        obj.secondaryCategoryId = secondaryCategoryId;
+                        int secondaryId = GetIdFromCode(secondaryCategoryCode, "SC");
+                        obj.secondaryCategoryId = secondaryId;
                         obj.price = price;
                         break;
 
@@ -61,6 +65,15 @@ namespace ServiceEndpoint
             }
 
 
+        }
+
+        private int GetIdFromCode(string code, string model)
+        {
+            IDal<IbaseClass> dal = FactoryDALLayer<IDal<IbaseClass>>.Create("ADODal");
+            obj = Factory<IbaseClass>.Create(model);
+
+            int Id = dal.SearchId(code, model);
+            return Id;
         }
 
         public void Delete(string shortCode, string model)
@@ -98,7 +111,7 @@ namespace ServiceEndpoint
 
         }
 
-        public void Update(string name, string shortCode, string description, decimal price, int primaryCategoryId, int secondaryCategoryId, string model)
+        public void Update(string name, string shortCode, string description, decimal price, int  primaryCategoryId, int secondaryCategoryId, string model)
         {
             try
             {
@@ -148,34 +161,46 @@ namespace ServiceEndpoint
             List<IbaseClass> categories = dal.Search();
         }
 
-        public void AddScheme(string name, string shortCode, string description, DateTime startdate, DateTime endDate, bool isExpired, decimal discountPercent, int unitsBooked,decimal revenueGenerated, int primaryCategoryId, int secondaryCategoryId, int productId, string expiredBy)
+        public void AddScheme(string name, string shortCode, string description, DateTime startdate, DateTime endDate, bool isExpired, decimal discountPercent, int unitsBooked, decimal revenueGenerated, string primaryCategoryShortCode, string secondaryCategoryCode, string productCode, string expiredBy)
         {
             try
             {
                 IDal<IbaseClass> dal = FactoryDALLayer<IDal<IbaseClass>>.Create("ADODal");
                 obj = Factory<IbaseClass>.Create("SH");
-                if (primaryCategoryId == 0)
+                if (string.IsNullOrEmpty(primaryCategoryShortCode))
                     obj.primaryCategoryId = null;
                 else
-                    obj.primaryCategoryId = primaryCategoryId;
-                if (secondaryCategoryId == 0)
+                {
+                    int Id = GetIdFromCode(primaryCategoryShortCode, "PC");
+                    obj.primaryCategoryId = Id;
+                }
+
+                if (string.IsNullOrEmpty(secondaryCategoryCode))
                     obj.secondaryCategoryId = null;
                 else
-                    obj.secondaryCategoryId = secondaryCategoryId;
-                if (productId == 0)
+                {
+                    int Id = GetIdFromCode(secondaryCategoryCode, "SC");
+                    obj.secondaryCategoryId = Id;
+                }
+
+                if (string.IsNullOrEmpty(productCode))
                     obj.productId = null;
                 else
-                    obj.productId = productId;
+                {
+                    int Id = GetIdFromCode(productCode, "PR");
+                    obj.productId = Id;
+                }
+
 
                 obj.name = name;
                 obj.shortCode = shortCode;
                 obj.description = description;
                 obj.startDate = startdate;
                 obj.endDate = endDate;
-                obj.isExpired = isExpired?1:0 ;
+                obj.isExpired = isExpired ? 1 : 0;
                 obj.type = unitsBooked > 0 ? 'U' : 'R';
-                obj.discountPercent = discountPercent ;
-                obj.unitsBooked =unitsBooked;
+                obj.discountPercent = discountPercent;
+                obj.unitsBooked = unitsBooked;
                 obj.revenueGenerated = revenueGenerated;
 
                 obj.expiredBy = expiredBy;
@@ -192,12 +217,16 @@ namespace ServiceEndpoint
 
         }
 
-        public List<SchemeObj> GetScheme(int primaryCategoryId, int secondaryCategoryId, int productId)
+        public List<SchemeObj> GetScheme(string primaryCategoryCode, string secondaryCategoryCode, string productCode)
         {
             try
             {
                 IDal<IbaseClass> dal = FactoryDALLayer<IDal<IbaseClass>>.Create("ADODal");
                 obj = Factory<IbaseClass>.Create("SH");
+
+                int primaryCategoryId = GetIdFromCode(productCode, "PC");
+                int secondaryCategoryId = GetIdFromCode(productCode, "SC");
+                int productId = GetIdFromCode(productCode, "PR");
 
                 List<IbaseClass> schemes = dal.SearchObj(primaryCategoryId, secondaryCategoryId, productId);
                 List<SchemeObj> Schemes = new List<SchemeObj>();
@@ -212,7 +241,7 @@ namespace ServiceEndpoint
             {
                 throw new FaultException(e.Message);
             }
-            
+
         }
 
         public List<ProductsAndSchemes> GetSchemeForProducts(List<ProductsAndQty> products)
@@ -226,7 +255,8 @@ namespace ServiceEndpoint
                 foreach (var item in products)
                 {
 
-                    List<IbaseClass> schemes = dal.SearchScheme(item.productId, item.orderedQty);
+                    int productId = GetIdFromCode(item.productCode, "PR");
+                    List<IbaseClass> schemes = dal.SearchScheme(productId, item.orderedQty);
                     List<SchemeObj> Schemes = new List<SchemeObj>();
                     ProductsAndSchemes ps = new ProductsAndSchemes();
                     foreach (var o in schemes)
@@ -244,7 +274,7 @@ namespace ServiceEndpoint
             {
                 throw new FaultException(e.Message);
             }
-            
+
         }
 
         private SchemeObj transform(IbaseClass obj)

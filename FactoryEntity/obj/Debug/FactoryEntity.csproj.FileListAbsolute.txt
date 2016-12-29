@@ -20,3 +20,25 @@ D:\FieldAssist\FieldAssistProject\FAProject\FactoryEntity\bin\Debug\Microsoft.Pr
 D:\FieldAssist\FieldAssistProject\FAProject\FactoryEntity\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
 D:\FieldAssist\FieldAssistProject\FAProject\FactoryEntity\obj\Debug\FactoryEntity.dll
 D:\FieldAssist\FieldAssistProject\FAProject\FactoryEntity\obj\Debug\FactoryEntity.pdb
+D:\Design Pattern\design-pattern\FactoryEntity\bin\Debug\FactoryEntity.dll
+D:\Design Pattern\design-pattern\FactoryEntity\bin\Debug\FactoryEntity.pdb
+D:\Design Pattern\design-pattern\FactoryEntity\bin\Debug\CommonDAL.dll
+D:\Design Pattern\design-pattern\FactoryEntity\bin\Debug\FAProject.dll
+D:\Design Pattern\design-pattern\FactoryEntity\bin\Debug\InterfaceBaseClass.dll
+D:\Design Pattern\design-pattern\FactoryEntity\bin\Debug\InterfaceDal.dll
+D:\Design Pattern\design-pattern\FactoryEntity\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Design Pattern\design-pattern\FactoryEntity\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+D:\Design Pattern\design-pattern\FactoryEntity\bin\Debug\Microsoft.Practices.Unity.dll
+D:\Design Pattern\design-pattern\FactoryEntity\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+D:\Design Pattern\design-pattern\FactoryEntity\bin\Debug\CommonDAL.pdb
+D:\Design Pattern\design-pattern\FactoryEntity\bin\Debug\FAProject.pdb
+D:\Design Pattern\design-pattern\FactoryEntity\bin\Debug\InterfaceBaseClass.pdb
+D:\Design Pattern\design-pattern\FactoryEntity\bin\Debug\InterfaceDal.pdb
+D:\Design Pattern\design-pattern\FactoryEntity\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\Design Pattern\design-pattern\FactoryEntity\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\Design Pattern\design-pattern\FactoryEntity\bin\Debug\Microsoft.Practices.Unity.xml
+D:\Design Pattern\design-pattern\FactoryEntity\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+D:\Design Pattern\design-pattern\FactoryEntity\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+D:\Design Pattern\design-pattern\FactoryEntity\obj\Debug\FactoryEntity.csprojResolveAssemblyReference.cache
+D:\Design Pattern\design-pattern\FactoryEntity\obj\Debug\FactoryEntity.dll
+D:\Design Pattern\design-pattern\FactoryEntity\obj\Debug\FactoryEntity.pdb

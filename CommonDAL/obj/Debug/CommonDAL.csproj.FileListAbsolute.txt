@@ -5,3 +5,10 @@ D:\FieldAssist\FieldAssistProject\FAProject\CommonDAL\bin\Debug\InterfaceDal.pdb
 D:\FieldAssist\FieldAssistProject\FAProject\CommonDAL\obj\Debug\CommonDAL.csprojResolveAssemblyReference.cache
 D:\FieldAssist\FieldAssistProject\FAProject\CommonDAL\obj\Debug\CommonDAL.dll
 D:\FieldAssist\FieldAssistProject\FAProject\CommonDAL\obj\Debug\CommonDAL.pdb
+D:\Design Pattern\design-pattern\CommonDAL\bin\Debug\CommonDAL.dll
+D:\Design Pattern\design-pattern\CommonDAL\bin\Debug\CommonDAL.pdb
+D:\Design Pattern\design-pattern\CommonDAL\bin\Debug\InterfaceDal.dll
+D:\Design Pattern\design-pattern\CommonDAL\bin\Debug\InterfaceDal.pdb
+D:\Design Pattern\design-pattern\CommonDAL\obj\Debug\CommonDAL.csprojResolveAssemblyReference.cache
+D:\Design Pattern\design-pattern\CommonDAL\obj\Debug\CommonDAL.dll
+D:\Design Pattern\design-pattern\CommonDAL\obj\Debug\CommonDAL.pdb

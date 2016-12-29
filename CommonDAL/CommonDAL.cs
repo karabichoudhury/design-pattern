@@ -7,7 +7,7 @@ using InterfaceDal;
 
 namespace CommonDAL
 {
-    public abstract class AbstractDAL<TEntity>:IDal<TEntity>
+    public abstract class AbstractDAL<TEntity> : IDal<TEntity>
     {
         protected string ConnectionString = "";
         protected List<TEntity> anyTypes = new List<TEntity>();
@@ -22,17 +22,22 @@ namespace CommonDAL
             anyTypes.Add(obj);
         }
 
-        public virtual void Update(TEntity obj,string model)
+        public virtual void Update(TEntity obj, string model)
         {
             throw new NotImplementedException();
         }
 
-        public virtual void Delete(TEntity obj,string model)
+        public virtual void Delete(TEntity obj, string model)
         {
             throw new NotImplementedException();
         }
 
         public virtual List<TEntity> Search()
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual int SearchId(string code, string model)
         {
             throw new NotImplementedException();
         }

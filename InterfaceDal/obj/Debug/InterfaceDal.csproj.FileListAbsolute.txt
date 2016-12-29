@@ -2,3 +2,8 @@ D:\FieldAssist\FieldAssistProject\FAProject\InterfaceDal\bin\Debug\InterfaceDal.
 D:\FieldAssist\FieldAssistProject\FAProject\InterfaceDal\bin\Debug\InterfaceDal.pdb
 D:\FieldAssist\FieldAssistProject\FAProject\InterfaceDal\obj\Debug\InterfaceDal.dll
 D:\FieldAssist\FieldAssistProject\FAProject\InterfaceDal\obj\Debug\InterfaceDal.pdb
+D:\Design Pattern\design-pattern\InterfaceDal\bin\Debug\InterfaceDal.dll
+D:\Design Pattern\design-pattern\InterfaceDal\bin\Debug\InterfaceDal.pdb
+D:\Design Pattern\design-pattern\InterfaceDal\obj\Debug\InterfaceDal.csprojResolveAssemblyReference.cache
+D:\Design Pattern\design-pattern\InterfaceDal\obj\Debug\InterfaceDal.dll
+D:\Design Pattern\design-pattern\InterfaceDal\obj\Debug\InterfaceDal.pdb

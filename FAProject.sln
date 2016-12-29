@@ -19,6 +19,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryDal", "FactoryDal\Fa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFDAL", "EFDAL\EFDAL.csproj", "{409F574A-B57B-4443-875A-F154A319FBB1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceClient", "ServiceClient\ServiceClient.csproj", "{3D8585E1-CFC3-40FC-9D85-F6DE994519F7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EA280704-C4C1-40E4-AB60-A26C001CF8CA} = {EA280704-C4C1-40E4-AB60-A26C001CF8CA}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +66,10 @@ Global
 		{409F574A-B57B-4443-875A-F154A319FBB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{409F574A-B57B-4443-875A-F154A319FBB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{409F574A-B57B-4443-875A-F154A319FBB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D8585E1-CFC3-40FC-9D85-F6DE994519F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D8585E1-CFC3-40FC-9D85-F6DE994519F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D8585E1-CFC3-40FC-9D85-F6DE994519F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D8585E1-CFC3-40FC-9D85-F6DE994519F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

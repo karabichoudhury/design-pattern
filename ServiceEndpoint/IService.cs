@@ -15,7 +15,7 @@ namespace ServiceEndpoint
     {
         //Add
         [OperationContract]
-        void Add(string name, string shortCode, string description, decimal price, int primaryCategoryId, int secondaryCategoryId, string model);
+        void Add(string name, string shortCode, string description, decimal price, string primaryCategoryShortCode, string secondaryShortCode, string model);
 
         [OperationContract]
         void Delete(string shortCode, string model);
@@ -23,17 +23,17 @@ namespace ServiceEndpoint
         [OperationContract]
         void Update(string name, string shortCode, string description, decimal price, int primaryCategoryId, int secondaryCategoryId, string model);
 
-        
+
         [OperationContract]
         void GetPrimaryCategories();
 
-           
+
         //Scheme operations
         [OperationContract]
-        void AddScheme(string name, string shortCode, string description, DateTime startdate, DateTime endDate, bool isExpired,decimal discountPercent,int unitsBooked,decimal revenueGenerated, int primaryCategoryId, int secondaryCategoryId, int productId, string expiredBy);
+        void AddScheme(string name, string shortCode, string description, DateTime startdate, DateTime endDate, bool isExpired, decimal discountPercent, int unitsBooked, decimal revenueGenerated, string primaryCategoryShortCode, string secondaryCategoryCode, string productCode, string expiredBy);
 
         [OperationContract]
-        List<SchemeObj> GetScheme(int primaryCategoryId, int secondaryCategoryId, int productId);
+        List<SchemeObj> GetScheme(string primaryCategoryCode, string secondaryCategoryCode, string productCode);
 
         [OperationContract]
         List<ProductsAndSchemes> GetSchemeForProducts(List<ProductsAndQty> products);
@@ -78,23 +78,23 @@ namespace ServiceEndpoint
         public DateTime modifiedOn { get; set; }
         [DataMember]
         public string modifiedBy { get; set; }
-        
-        
-        
-        
-       
-        
-       
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
     }
 
     [DataContract]
     public class ProductsAndQty
     {
         [DataMember]
-        public int productId { get; set; }
+        public string productCode { get; set; }
         [DataMember]
         public int orderedQty { get; set; }
     }
@@ -104,7 +104,7 @@ namespace ServiceEndpoint
     {
         [DataMember]
         public ProductsAndQty productqty { get; set; }
-        
+
         [DataMember]
         public List<SchemeObj> schemes { get; set; }
     }

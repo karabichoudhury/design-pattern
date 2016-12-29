@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/ServiceEndpoint" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServiceEndpoint" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1828/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfSchemeObj">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SchemeObj" nillable="true" type="tns:SchemeObj" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchemeObj" nillable="true" type="tns:ArrayOfSchemeObj" />
+  <xs:complexType name="SchemeObj">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="createdBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="createdOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="discountPercent" type="xs:decimal" />
+      <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="expiredBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="isExpired" type="xs:int" />
+      <xs:element minOccurs="0" name="modifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="modifiedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="primaryCategoryId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="productId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="revenueGenerated" type="xs:decimal" />
+      <xs:element minOccurs="0" name="secondaryCategoryId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="shortCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="type" type="ser:char" />
+      <xs:element minOccurs="0" name="unitsBooked" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SchemeObj" nillable="true" type="tns:SchemeObj" />
+  <xs:complexType name="ArrayOfProductsAndQty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductsAndQty" nillable="true" type="tns:ProductsAndQty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductsAndQty" nillable="true" type="tns:ArrayOfProductsAndQty" />
+  <xs:complexType name="ProductsAndQty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="orderedQty" type="xs:int" />
+      <xs:element minOccurs="0" name="productCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductsAndQty" nillable="true" type="tns:ProductsAndQty" />
+  <xs:complexType name="ArrayOfProductsAndSchemes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductsAndSchemes" nillable="true" type="tns:ProductsAndSchemes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductsAndSchemes" nillable="true" type="tns:ArrayOfProductsAndSchemes" />
+  <xs:complexType name="ProductsAndSchemes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="productqty" nillable="true" type="tns:ProductsAndQty" />
+      <xs:element minOccurs="0" name="schemes" nillable="true" type="tns:ArrayOfSchemeObj" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductsAndSchemes" nillable="true" type="tns:ProductsAndSchemes" />
+</xs:schema>
